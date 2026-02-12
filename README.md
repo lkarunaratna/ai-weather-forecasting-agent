@@ -79,14 +79,14 @@ At its core, the system flow is as follows:
 
 ```mermaid
 graph TD
-    A[User Input] --> B{Agent (main.py/cli.py)};
-    B -- Configured with --> C[LLM (model.py)];
-    B -- Guided by --> D[SYSTEM_PROMPT (constants.py)];
-    B -- Uses --> E[Tools (tools.py)];
-    E -- Provides Context --> F[Context (constants.py)];
-    B -- Stores State in --> G[InMemorySaver (memory.py)];
-    E -- Calls --> H[External APIs (Nominatim, Open-Meteo)];
-    B --> I[Structured Response (response.py)];
+    A[User Input] --> B{{"Agent (main.py/cli.py)"}};
+    B -- Configured with --> C{{"LLM (model.py)"}};
+    B -- Guided by --> D{{"SYSTEM_PROMPT (constants.py)"}};
+    B -- Uses --> E{{"Tools (tools.py)"}};
+    E -- Provides Context --> F{{"Context (constants.py)"}};
+    B -- Stores State in --> G{{"InMemorySaver (memory.py)"}};
+    E -- Calls --> H{{"External APIs (Nominatim, Open-Meteo)"}};
+    B --> I{{"Structured Response (response.py)"}};
     I --> J[Output to User];
     F -- Used by --> E;
     H -- Returns Data to --> E;
