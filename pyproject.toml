@@ -1,0 +1,17 @@
+[project]
+name = "ai-weather-forecasting-agent"
+version = "0.1.0"
+description = "AI Weather Forecasting Agent - minimal scaffold"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [ { name = "Your Name" } ]
+dependencies = [
+    "requests>=2.0"
+]
+
+[project.scripts]
+ai-weather-agent = "ai_weather_forecasting_agent.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
